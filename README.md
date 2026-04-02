@@ -88,9 +88,29 @@ Skills can complement each other depending on the need:
 
 ## Installation
 
-> **Install skills directly from the official marketplaces:**
-> - **Claude:** [claude.ai/customize/skills](https://claude.ai/customize/skills)
-> - **ChatGPT:** [chatgpt.com/skills](https://chatgpt.com/skills)
+### On Claude.ai — Skills Marketplace
+
+1. Go to [claude.ai/customize/skills](https://claude.ai/customize/skills)
+2. Click **"Add skill"** (top right)
+3. Paste the raw URL of the `SKILL.md` file you want to install, for example:
+   ```
+   https://raw.githubusercontent.com/StealthyLabsHQ/ai-edu-skills/main/academic-support/SKILL.md
+   ```
+4. Claude will automatically load the skill in all your future conversations
+
+Available skill URLs:
+| Skill | URL |
+|-------|-----|
+| `academic-support` | `https://raw.githubusercontent.com/StealthyLabsHQ/ai-edu-skills/main/academic-support/SKILL.md` |
+| `cover-letter` | `https://raw.githubusercontent.com/StealthyLabsHQ/ai-edu-skills/main/cover-letter/SKILL.md` |
+| `natural-writing` | `https://raw.githubusercontent.com/StealthyLabsHQ/ai-edu-skills/main/natural-writing/SKILL.md` |
+
+### On ChatGPT — Skills Marketplace
+
+1. Go to [chatgpt.com/skills](https://chatgpt.com/skills)
+2. Click **"Add skill"**
+3. Paste the raw URL of the `SKILL.md` file you want to install (same URLs as above)
+4. The skill will be available in your ChatGPT conversations
 
 ### On Claude.ai (with Claude Code or Cowork)
 
