@@ -210,7 +210,7 @@ a note of optimism (maximized). It is a recognizable tic from ten feet away.
 
 **After:**
 > The main obstacle at the Leroy firm is not budget - it is time. Testing Dext or
-> Pennylane takes hours nobody has during tax season. The solution chosen was to
+> Xero takes hours nobody has during tax season. The solution chosen was to
 > dedicate one staff member to the tool during June, when activity slows down.
 > Did it work? Partially. The software is running, but half the team still does not use it.
 
@@ -370,7 +370,7 @@ but desirable for clarity.
 > The entity noted a significant improvement in its productivity.
 
 **After:**
-> The firm launched Pennylane in September. Three months later, the four
+> The firm launched Xero in September. Three months later, the four
 > staff who use it handle an average of 15 more files per month. The
 > two who have not yet adopted it say they lack time to get trained.
 
@@ -458,13 +458,16 @@ AI often mixes straight quotes (""), and curly double quotes (""). In standard E
 - Double curly quotes " " for quotations
 - Single quotes ' ' for quotations within quotations
 - Never straight quotes in a final text
+- Never French guillemets « » — these immediately reveal a non-English origin
 
 Other typography points:
-- Em dash without spaces in American style (like this—see)
+- Em dash without spaces in American style (like this—see). British English uses a spaced en dash (like this – see), but never the French convention of a spaced em dash.
 - Ellipsis: three dots as a single character (…) rather than three separate periods (...)
+- **No space before punctuation**: in English, no space before `:`, `;`, `?`, `!`. This is a direct French interference error — French requires a non-breaking space before these marks, English does not.
+- Period and comma go **inside** closing quotation marks in American English: "like this." Not outside: "like this".
 
-**Rule**: verify typography consistently. A text with mixed quotation styles
-betrays either foreign-language influence or AI generation.
+**Rule**: verify typography consistently. A text with mixed quotation styles or French spacing habits
+betrays foreign-language influence and is flagged by careful readers and detectors alike.
 
 ---
 
@@ -573,7 +576,7 @@ What does the author recommend? What remains to be done?
 > process whose prospects look promising.
 
 **After:**
-> The Leroy firm will deploy Pennylane across all files by September.
+> The Leroy firm will deploy Xero across all files by September.
 > The main risk is overload during tax season. The recommendation is to
 > keep the old system running in parallel for six months, until the whole team
 > is comfortable - even if it means absorbing the cost of the double license.
@@ -609,7 +612,7 @@ the thinking.
 **After:**
 > When I started my work placement at the Leroy firm in September 2024, the
 > staff were still using an Excel spreadsheet to track VAT returns.
-> Eight months later, half the files are on Pennylane. This thesis
+> Eight months later, half the files are on Xero. This thesis
 > tells the story of that transition - what worked, what got stuck, and what remains to be done.
 
 ### Pattern 26: Mechanical Transitions
@@ -654,7 +657,7 @@ summarizes what has already been read, it serves no purpose.
 > The opening question was: how can a small firm digitalize without stopping
 > production? The answer at the Leroy firm was to proceed tool by tool,
 > starting with supplier invoices. What was not resolved: ongoing training.
-> Two staff out of eight are still not self-sufficient on Pennylane,
+> Two staff out of eight are still not self-sufficient on Xero,
 > and nobody has time to support them.
 
 ### Pattern 28: AI Accounting/Management Vocabulary
@@ -759,7 +762,7 @@ and signal lived experience. Even when users do not have these details, ask them
 |---|---|---|
 | Generic (AI) | "A company improved its processes" | Very low |
 | Medium | "An accounting firm with 8 staff reduced its turnaround times" | Medium |
-| Specific (human) | "The Leroy firm in Ivry reduced financial statement production time from 6 to 4 weeks by switching to Pennylane, except for property management companies that stayed on Sage" | High |
+| Specific (human) | "The Leroy firm in Ivry reduced financial statement production time from 6 to 4 weeks by switching to Xero, except for property management companies that stayed on QuickBooks" | High |
 
 ### Pattern 33: Uniformly Formal Language Register
 
@@ -1212,7 +1215,7 @@ observed things, has a viewpoint. Do not just report - react.
 > The tool has advantages and disadvantages.
 
 **After (with opinion):**
-> Pennylane does bank reconciliation and invoice collection very well.
+> Xero does bank reconciliation and invoice collection very well.
 > But its review module is frustrating: it forces you to validate account by
 > account, with no overview. For someone used to scanning a ledger at a glance,
 > that is a step backward.
@@ -1375,7 +1378,7 @@ uncertainty) throughout the text. A human has dense zones
 - **Allow controlled digressions.** A parenthetical, an aside in dashes,
   a remark that is not strictly in the plan but shows a human is thinking while writing.
 
-  > "Pennylane's utilization rate reached 75% in January (I suspect
+  > "Xero's utilization rate reached 75% in January (I suspect
   > it was because New Year's resolutions kicked in - by February, we were
   > back down to 60%)."
 

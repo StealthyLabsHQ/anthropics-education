@@ -166,7 +166,7 @@ neutrality via sentiment analysis.
 > The tool has advantages and disadvantages.
 
 **After (human perspective):**
-> Pennylane does invoice collection well, but its review module is frustrating.
+> Xero does invoice collection well, but its review module is frustrating.
 
 ---
 
