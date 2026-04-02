@@ -273,7 +273,7 @@ concluding "in sum," sandwich structure, triads, mechanical transitions
 ### Example C - MIXED (expected score: ~0.52)
 
 > My internship at the retail company helped me understand the stakes of modern
-> retail management. At the start I was a bit lost — the manager handed me a binder
+> retail management. At the start I was a bit lost: the manager handed me a binder
 > and said "figure it out," which was pretty blunt, but I learned a lot.
 >
 > The analysis of the merchandising strategies implemented by the company reveals
@@ -348,7 +348,7 @@ Text submitted
   - Produces a calibrated JSON verdict
      |
      v
-[Service — Turnitin / Compilatio]
+[Service: Turnitin / Compilatio]
   - Displays result to the educator
 ```
 

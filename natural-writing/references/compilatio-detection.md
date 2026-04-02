@@ -41,7 +41,7 @@ version was **v4.2.1** (in service since October 2024).
 4. **Cleaning**: filtering of irrelevant passages to reduce false positives
 5. **Presentation**: display of the final score in the report
 
-The two key linguistic metrics are **perplexity** (text predictability — AI texts
+The two key linguistic metrics are **perplexity** (text predictability: AI texts
 are less surprising) and **burstiness** (human writing mixes short and long sentences;
 AI texts are more uniform).
 
@@ -148,14 +148,14 @@ that of **Philippe Dessus and Daniel Seyve** (Université Grenoble Alpes), publi
 **Main results from available abstracts**:
 - The study tested Compilatio Magister+ on **86 documents** (academic texts in a
   university context)
-- For detection of human texts: **Compilatio Magister+ achieved error-free scores —
-  zero false positives** in this sample
+- For detection of human texts: **Compilatio Magister+ achieved error-free scores,
+  zero false positives**, in this sample
 - Among other detectors tested comparatively, only one third-party study (Bellini
   et al., 2024) showed good performance: **13 true positives for 4 false positives**;
   other detectors showed significantly weaker results
 
 This study is notable because it constitutes a test **under real conditions** with
-French-speaking students on academic texts — a substantially harder terrain than
+French-speaking students on academic texts, a substantially harder terrain than
 Compilatio's internal benchmarks.
 
 ### Important Nuances on False Positives
@@ -170,7 +170,7 @@ Compilatio officially acknowledges several high-risk situations for false positi
   wrongly flagged
 
 Feedback from teachers on Campus Matin (December 2023) reported reliability "around
-90%" with "10% possibility of a false positive" — corresponding to broader
+90%" with "10% possibility of a false positive", corresponding to broader
 institutional usage conditions than the optimal test conditions.
 
 ---
@@ -199,7 +199,7 @@ TikTok, and dedicated platforms), though academic research specific to Compilati
 remains limited:
 
 **Text humanisers**: tools branded "AI humaniser" (often paraphrasers trained to
-imitate human style) are actively searched on French student forums in 2025–2026 —
+imitate human style) are actively searched on French student forums in 2025–2026,
 indirect evidence of the initial effectiveness of detection.
 
 **Injection of personal elements**: personal experiences, anecdotes, and deliberate
@@ -211,7 +211,7 @@ model-specific stylistic markers.
 
 **Unicode alterations**: Compilatio declares having a "detection of altered texts"
 module specifically to counter the insertion of visually identical Unicode characters
-(e.g. Cyrillic or Greek characters resembling Latin ones) — confirming this vector
+(e.g. Cyrillic or Greek characters resembling Latin ones), confirming this vector
 had been documented and used.
 
 **General structural limitations of AI detectors** (applicable to Compilatio): the
@@ -244,12 +244,12 @@ education with academic experts.
 **October 2024**: Update to v4.2.1 (performance improvements).
 
 **Early 2025**: Addition of **deep paraphrase detection (semantic)** in Magister+
-— a major feature targeting deep paraphrases undetectable by the syntactic approach.
+, a major feature targeting deep paraphrases undetectable by the syntactic approach.
 
 **February 2026**: Announcement of analysis report updates for Magister, Magister+,
 and Studium (interface and precision improvements).
 
-**4 September 2025**: Release of v4.5.3 — current version as of 2 April 2026,
+**4 September 2025**: Release of v4.5.3, current version as of 2 April 2026,
 now supporting GPT-5.x, Claude Sonnet 4.5, Gemini 2.5 Flash/3 Pro, DeepSeek,
 and other recent models.
 
@@ -277,7 +277,7 @@ Inter-analysis variability for the same document is officially acknowledged.
 **Key difference Studium vs Magister+**: Studium provides an AI score without the
 advanced features (semantic detection, multilingual, altered texts, grammar report).
 It is a student self-check tool, not a sanctioning tool. Magister+ is the complete
-institutional tool — but it remains a **decision-support tool**, never proof on
+institutional tool, but it remains a **decision-support tool**, never proof on
 its own.
 
 ---
@@ -287,12 +287,12 @@ its own.
 | Compilatio tier encountered | Relevant formulas | Priority action |
 |---|---|---|
 | **Studium** (student self-check) | Formulas 1–27 (Tier 1 surface) | Burstiness (B), AI markers, TTR variance |
-| **Magister** (teacher, no AI detection) | Similarity only — not AI detection | Focus on source originality |
+| **Magister** (teacher, no AI detection) | Similarity only (no AI detection) | Focus on source originality |
 | **Magister+** (teacher, full pipeline) | Formulas 1–38 + semantic layer | All surface metrics + deep paraphrase + student anchoring (Step 0) |
 
 The semantic detection layer in Magister+ is the most consequential addition: it
 targets paraphrases that defeat syntactic detection. The only reliable counter is
-genuine content from the student's lived experience — data that no LLM can possess.
+genuine content from the student's lived experience; data that no LLM can possess.
 
 ---
 

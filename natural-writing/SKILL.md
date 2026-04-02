@@ -458,12 +458,12 @@ AI often mixes straight quotes (""), and curly double quotes (""). In standard E
 - Double curly quotes " " for quotations
 - Single quotes ' ' for quotations within quotations
 - Never straight quotes in a final text
-- Never French guillemets « » — these immediately reveal a non-English origin
+- Never French guillemets « »: these immediately reveal a non-English origin
 
 Other typography points:
 - Em dash without spaces in American style (like this—see). British English uses a spaced en dash (like this – see), but never the French convention of a spaced em dash.
 - Ellipsis: three dots as a single character (…) rather than three separate periods (...)
-- **No space before punctuation**: in English, no space before `:`, `;`, `?`, `!`. This is a direct French interference error — French requires a non-breaking space before these marks, English does not.
+- **No space before punctuation**: in English, no space before `:`, `;`, `?`, `!`. This is a direct French interference error: French requires a non-breaking space before these marks, English does not.
 - Period and comma go **inside** closing quotation marks in American English: "like this." Not outside: "like this".
 
 **Rule**: verify typography consistently. A text with mixed quotation styles or French spacing habits

@@ -1166,14 +1166,14 @@ Same interpretation grid.
 
 ---
 
-## Tier 2 & Tier 3 — Foundation Model Metrics
+## Tier 2 & Tier 3: Foundation Model Metrics
 
 > **Architecture note (Gemini 3.1 Pro Thinking High):**
 > Formulas 1–34 (stylometry, N-grams, POS-tagging) are excellent for rapid Tier 1
 > filtering but are vulnerable to advanced prompt engineering. Formulas 35–38 operate
 > at the level of **foundation model log-probabilities** and **syntactic graph topology**.
 > They require an external inference pipeline and cannot be computed by the evaluating
-> LLM itself — but understanding their logic informs exactly how to write text that
+> LLM itself, but understanding their logic informs exactly how to write text that
 > defeats them.
 >
 > **Calibration warning:** thresholds below are calibrated on a reference architecture
@@ -1182,7 +1182,7 @@ Same interpretation grid.
 
 ---
 
-## 35. Parse Tree Depth Variance (PTDV) — Tier 1 (fast)
+## 35. Parse Tree Depth Variance (PTDV): Tier 1 (fast)
 
 **Source: Gemini 3.1 Pro Thinking High**
 **Tool: spaCy `en_core_web_trf` or Stanford CoreNLP**
@@ -1208,13 +1208,13 @@ Note: the branching factor variance (number of children per node) can be
 
 | σ²_D | Interpretation | Action |
 |---|---|---|
-| < 2.5 | AI: all sentences structurally similar — depths like [5, 6, 5, 5, 7, 6] | Add fragments and embedded clauses |
+| < 2.5 | AI: all sentences structurally similar (depths like [5, 6, 5, 5, 7, 6]) | Add fragments and embedded clauses |
 | 2.5 – 4.5 | Grey zone | Check Burstiness Score (Formula 1) jointly |
-| > 4.5 | Human: high heterogeneity — depths like [2, 8, 4, 11, 3] | OK |
+| > 4.5 | Human: high heterogeneity (depths like [2, 8, 4, 11, 3]) | OK |
 
 ### Attack Vector
 
-**Technique:** Structural Burstiness Prompting — explicitly request alternation
+**Technique:** Structural Burstiness Prompting: explicitly request alternation
 between sentences of 1–4 words and sentences containing multiple embedded clauses.
 
 **Why it works:** Forcing short (D ≈ 2) sentences next to complex (D ≈ 9–12)
@@ -1223,10 +1223,10 @@ sentences makes each D(T_j) diverge sharply from μ_D. The squared deviations
 
 ---
 
-## 36. Real Perplexity — PPL (Cross-Entropy Loss) — Tier 2
+## 36. Real Perplexity: PPL (Cross-Entropy Loss), Tier 2
 
 **Source: Gemini 3.1 Pro Thinking High**
-**Tool: LLaMA-3-8B quantised or GPT-2 XL as proxy — requires a forward pass**
+**Tool: LLaMA-3-8B quantised or GPT-2 XL as proxy (requires a forward pass)**
 
 Perplexity measures how much a language model is "surprised" by a token sequence.
 AI-generated text sits near the probability distribution's peak → very low perplexity.
@@ -1263,12 +1263,12 @@ detection threshold.
 
 ---
 
-## 37. GLTR Token Rank Ratios — Tier 2
+## 37. GLTR Token Rank Ratios: Tier 2
 
-**Source: Gehrmann et al. — Giant Language Model Test Room**
+**Source: Gehrmann et al. (Giant Language Model Test Room)**
 **Tool: any LLM forward pass to extract per-token probability ranks**
 
-GLTR does not look at absolute probability — it looks at the **rank** of the
+GLTR does not look at absolute probability: it looks at the **rank** of the
 chosen token in the model's sorted distribution. LLMs sample almost exclusively
 from the Top-10. Humans regularly reach into the long tail (Top-1000+).
 
@@ -1309,15 +1309,15 @@ and B₁₀ₖ₊ buckets artificially, mimicking human long-tail usage patterns
 
 ---
 
-## 38. DetectGPT Score (Perturbation Discrepancy) — Tier 3
+## 38. DetectGPT Score (Perturbation Discrepancy): Tier 3
 
-**Source: Mitchell et al., Stanford (2023) — zero-shot detection**
+**Source: Mitchell et al., Stanford (2023), zero-shot detection**
 **Tool: T5-large as perturbation model + LLM proxy for log-probability scoring**
-**Cost: O(K × N × V) — trigger only when Tier 1+2 score is in the 40–60% zone**
+**Cost: O(K × N × V). Trigger only in the 40–60% uncertainty zone (Tier 1+2 combined)**
 
 The core hypothesis: AI-generated text sits at a **local maximum** of the
 log-probability function. Perturbing it slightly causes a sharp probability drop.
-Human text is not at a local maximum — perturbations leave probability stable
+Human text is not at a local maximum: perturbations leave probability stable
 or even improve it.
 
 ### Formula
@@ -1353,7 +1353,7 @@ paraphrase with a radically different model (BART, Quillbot) or manually
 rewrite 20% of sentences.
 
 **Why it works:** Paraphrasing moves x off the local maximum of p_θ. Once
-displaced, log p_θ(x) drops initially — but subsequent perturbations x̃ₖ no
+displaced, log p_θ(x) drops initially, but subsequent perturbations x̃ₖ no
 longer trigger a sharp further drop. The numerator d(x) tends toward 0 and
 Z(x) falls below the detection threshold.
 
@@ -1368,9 +1368,9 @@ implement (Turnitin AI Detection, GPTZero, Compilatio Magister):
 
 | Tier | Complexity | Formulas | Trigger condition |
 |---|---|---|---|
-| **Tier 1** | O(N) — instant | Formulas 1–34 (surface) + Formula 35 (PTDV via spaCy) | Always |
-| **Tier 2** | O(N × V) — 1 forward pass | Formulas 36 (PPL) + 37 (GLTR) — requires GPU proxy | Tier 1 score 30–70% |
-| **Tier 3** | O(K × N × V) — 100 passes | Formula 38 (DetectGPT) | Tier 1+2 score 40–60% only |
+| **Tier 1** | O(N), instant | Formulas 1–34 (surface) + Formula 35 (PTDV via spaCy) | Always |
+| **Tier 2** | O(N × V), 1 forward pass | Formulas 36 (PPL) + 37 (GLTR), requires GPU proxy | Tier 1 score 30–70% |
+| **Tier 3** | O(K × N × V), 100 passes | Formula 38 (DetectGPT) | Tier 1+2 score 40–60% only |
 
 ### Practical implications for students
 
@@ -1380,8 +1380,8 @@ Detection (2023) uses a lightweight Tier 2 pass. GPTZero uses Tier 2 + partial
 Tier 3. Defeating Tier 3 requires the Paraphrasing Attack (Formula 38) combined
 with genuine student anchoring (Step 0 of the skill).
 
-**The irreducible defence:** a text grounded in lived experience — named
-people, specific dates, real version numbers, acknowledged failures — generates
+**The irreducible defence:** a text grounded in lived experience: named
+people, specific dates, real version numbers, acknowledged failures. This generates
 naturally high PPL and healthy GLTR long-tail ratios. No prompt engineering
 fully replicates authentic content.
 
@@ -1594,7 +1594,7 @@ PRS = (0.3 x (1 - structure_changed))
 7. **Our self-evaluation now covers ~90% of the real scoring.** Formulas
    30-33 (LRAD, CDI, EDC, SDR) compensate for external pipeline metrics
    (retrieval, paraphrase_bypass, cross_model_agreement). Formulas 35-38
-   document the Tier 2/3 pipeline architecture in full — but the LLM cannot
+   document the Tier 2/3 pipeline architecture in full, but the LLM cannot
    compute real log-probabilities or run K perturbations itself. The remaining
    ~10% gap (real PPL, real DetectGPT Z-score) requires API access to a GPU
    proxy. The best compensator remains a text grounded in reality.
