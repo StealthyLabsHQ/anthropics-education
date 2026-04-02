@@ -115,12 +115,12 @@ Available skill URLs:
 ### On Claude.ai (with Claude Code or Cowork)
 
 ```bash
-git clone https://github.com/StealthyLabsHQ/anthropics-education.git
+git clone https://github.com/StealthyLabsHQ/ai-edu-skills.git
 
 # Install the desired skills (with their references)
-cp -r anthropics-education/academic-support /mnt/skills/user/
-cp -r anthropics-education/cover-letter /mnt/skills/user/
-cp -r anthropics-education/natural-writing /mnt/skills/user/
+cp -r ai-edu-skills/academic-support /mnt/skills/user/
+cp -r ai-edu-skills/cover-letter /mnt/skills/user/
+cp -r ai-edu-skills/natural-writing /mnt/skills/user/
 ```
 
 > **Important:** copy the entire folder (with `references/`) so progressive loading works. Without the `references/` folder, Claude won't have access to detailed resources.
