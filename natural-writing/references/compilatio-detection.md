@@ -19,7 +19,7 @@ statistical, and linguistic features differentiating the two sources.
 
 ### AI Models Targeted on Input
 
-The official page `compilatio.net/ia-detecteur-info` explicitly lists the tools
+The official page `https://www.compilatio.net/en/ai-detector-info` explicitly lists the tools
 detected (as of 2 April 2026):
 
 - **OpenAI**: GPT-5.4, GPT-5.4 Pro, GPT-5.2, GPT-5.1, GPT-5, GPT-4.5, GPT-4o, GPT-4o Mini
@@ -300,8 +300,7 @@ genuine content from the student's lived experience; data that no LLM can posses
 - Official Compilatio documentation: `support.compilatio.net` (articles 17408769118993,
   22506632957841, 32390291601297, 44032940980753, 17407151992465, 17435773405329,
   115005902769, 26200879505937)
-- Product pages: `compilatio.net/magister-plus`, `compilatio.net/ia-detecteur-info`
-- Blog: `compilatio.net/blog/comment-fonctionnent-les-detecteurs-ia`
+- Product pages: `compilatio.net/magister-plus`, `https://www.compilatio.net/en/ai-detector-info`
 - Dessus, P. & Seyve, D. (2025). *La détection de l'utilisation de robots
   conversationnels en contexte universitaire : Le cas de Compilatio Magister+*.
   STICEF, Vol. 32, No 1, pp. 112–128. (Preprint: HAL UGA, hal-04578682)
