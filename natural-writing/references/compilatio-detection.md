@@ -22,9 +22,9 @@ statistical, and linguistic features differentiating the two sources.
 The official page `compilatio.net/ia-detecteur-info` explicitly lists the tools
 detected (as of 2 April 2026):
 
-- **OpenAI**: GPT-5.2, GPT-5.1, GPT-5, GPT-4.5, GPT-4o, GPT-4o Mini
-- **Anthropic**: Claude (notably Claude Sonnet 4.5)
-- **Google**: Gemini 2.5 Flash, Gemini 3 Pro, Copilot
+- **OpenAI**: GPT-5.4, GPT-5.4 Pro, GPT-5.2, GPT-5.1, GPT-5, GPT-4.5, GPT-4o, GPT-4o Mini
+- **Anthropic**: Claude Sonnet 4.6, Claude Opus 4.6, Claude Sonnet 4.5
+- **Google**: Gemini 3.1 Pro, Gemini 3.1 Pro Thinking, Gemini 2.5 Flash, Gemini 3 Pro, Copilot
 - **Mistral** (French model)
 - **Meta**: Llama
 - **Others**: DeepSeek, Jasper, YouChat, and "many others"
