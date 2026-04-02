@@ -9,7 +9,7 @@ Open-source `.md` skill library to turn Claude into a pedagogical assistant, fro
 ## Structure
 
 ```
-anthropics-education/
+ai-edu-skills/
 ├── README.md
 ├── academic-support/
 │   ├── SKILL.md                              ← Main skill (8 modules)
@@ -37,6 +37,7 @@ anthropics-education/
         ├── patterns-by-discipline.md         ← Discipline-specific AI patterns (accounting, law, social sciences, IT, health, humanities)
         ├── ai-markers.md                     ← Cross-disciplinary blacklist of 80+ AI markers with multipliers
         ├── detection-prompts.md              ← Reconstructed detection prompts (formulas, thresholds, architecture)
+        ├── compilatio-detection.md           ← Compilatio/Turnitin detection mechanisms and thresholds
         └── self-evaluation-formulas.md       ← Mathematical formulas for self-evaluating text before submission
 ```
 
