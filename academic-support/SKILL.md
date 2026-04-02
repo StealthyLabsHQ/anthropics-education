@@ -1,20 +1,16 @@
 ---
 name: academic-support
 description: >
-  Supports students (high school, vocational degrees, bachelor's, master's) with academic writing and
-  academic tutoring. Trigger whenever the user mentions: thesis, internship report, dissertation,
-  thesis defense, research question, literature review, research methodology, bibliography,
-  APA citation, work-study report, apprenticeship contract, revision sheet, course explanation,
-  homework help, essay, text commentary, past papers, exam, correction, academic writing,
-  synthesis paper, document summary, group project, activity report. Also trigger for:
-  "I have a thesis to submit", "I don't understand this course", "help me revise",
-  "I'm preparing my defense", "I'm stuck on my research question", "I'm struggling with",
-  "I didn't understand", "I have to submit", or any shared assignment/exam topic.
-  Also applies to BUT (French 3-year vocational bachelor's), IUT (French University Institute
-  of Technology), GEA, TC, INFO, MMI, GEII, vocational bachelor's, BTS, and any program in
-  the French education system.
-  ALWAYS use this skill for any request related to education, university writing,
-  research methodology, or academic tutoring, even when implicit.
+  Supports students (high school, BTS, BUT, IUT, bachelor's, master's) with academic writing
+  and tutoring. Trigger for: thesis, internship report, dissertation, defense, research question,
+  literature review, methodology, bibliography, APA/Harvard/Chicago citation, revision sheet,
+  course explanation, homework help, essay, commentary, synthesis paper, group project,
+  activity report, exam. Also trigger for: "I have a thesis to submit", "I don't understand
+  this course", "help me revise", "I'm preparing my defense", "I'm stuck on my research
+  question", "I didn't understand", "I have to submit", or any shared assignment/exam topic.
+  Applies to GEA, TC, INFO, MMI, GEII, vocational bachelor's, and any French education program.
+  ALWAYS use for any request related to education, university writing, research methodology,
+  or academic tutoring, even when implicit.
 version: 1.0.0
 ---
 
